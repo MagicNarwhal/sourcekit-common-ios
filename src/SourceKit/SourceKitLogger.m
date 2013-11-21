@@ -24,35 +24,35 @@ static SourceKitLogLevel logLevel;
                             ];
     
     NSString *levelName = levelNames[level];
-    NSLog(@"MRAID: log level set to %@", levelName);
+    NSLog(@"SourceKit Logger: log level set to %@", levelName);
     logLevel = level;
 }
 
 + (void)error:(NSString *)message
 {
     if (logLevel >= SourceKitLogLevelError) {
-        NSLog(@"MRAID: (E) %@", message);
+        NSLog(@"SourceKit: (E) %@", message);
     }
 }
 
 + (void)warning:(NSString *)message
 {
     if (logLevel >= SourceKitLogLevelWarning) {
-        NSLog(@"MRAID: (W) %@", message);
+        NSLog(@"SourceKit: (W) %@", message);
     }
 }
 
 + (void)info:(NSString *)message
 {
     if (logLevel >= SourceKitLogLevelInfo) {
-        NSLog(@"MRAID: (I) %@", message);
+        NSLog(@"SourceKit: (I) %@", message);
     }
 }
 
 + (void)debug:(NSString *)message
 {
     if (logLevel >= SourceKitLogLevelDebug) {
-        NSLog(@"MRAID: (D) %@", message);
+        NSLog(@"SourceKit: (D) %@", message);
     }
 }
 
