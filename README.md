@@ -19,6 +19,10 @@ Step 2: Import header file(s) into your project:
 
 	#import "SourceKitLogger.h"
 	#import "Reachability.h"
+	
+Step 3: Add the following to "Link Binary with Libraries"
+
+	SystemConfiguration.framework
 
 To use logging:
 
