@@ -6,6 +6,7 @@ SourceKit Common are a set of utilities used across several SourceKit projects.
 **Features:**
 
 - Logging
+- Reachability
 
 Getting Started
 ===============
@@ -17,8 +18,13 @@ Step 1: Include "SourceKitCommon" xcode project
 Step 2: Import header file(s) into your project:
 
 	#import "SourceKitLogger.h"
+	#import "Reachability.h"
+	
+Step 3: Add the following to "Link Binary with Libraries"
 
-Step 3: To use logging:
+	SystemConfiguration.framework
+
+To use logging:
 
 	[SourceKitLogger setLogLevel:SourceKitLogLevelError]; // Set logging level
 	
@@ -27,8 +33,27 @@ Step 3: To use logging:
 	[SourceKitLogger warning:@"...."];
 	[SourceKitLogger error:@"...."];
 	[SourceKitLogger debug:@"...."];
+	
+To use Reachability:
 
-That's it! 
+	// Allocate a reachability object
+	Reachability* reach = [Reachability reachabilityWithHostname:@"www.google.com"];
+
+	// Set the blocks 
+	reach.reachableBlock = ^(Reachability*reach)
+	{
+    	NSLog(@"REACHABLE!");
+	};
+
+	reach.unreachableBlock = ^(Reachability*reach)
+	{
+    	NSLog(@"UNREACHABLE!");
+	};
+
+	// Start the notifier, which will cause the reachability object to retain itself!
+	[reach startNotifier];
+	
+To get more information on Tony Million Reachability, please visit https://github.com/tonymillion/Reachability.
 
 LICENSE
 =======
