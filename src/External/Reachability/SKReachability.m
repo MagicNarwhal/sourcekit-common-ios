@@ -25,12 +25,12 @@
  POSSIBILITY OF SUCH DAMAGE. 
  */
 
-#import "Reachability.h"
+#import "SKReachability.h"
 
 
-NSString *const kReachabilityChangedNotification = @"kReachabilityChangedNotification";
+NSString *const kSKReachabilityChangedNotification = @"kReachabilityChangedNotification";
 
-@interface Reachability ()
+@interface SKReachability ()
 
 @property (nonatomic, assign) SCNetworkReachabilityRef  reachabilityRef;
 
@@ -72,9 +72,9 @@ static void TMReachabilityCallback(SCNetworkReachabilityRef target, SCNetworkRea
 {
 #pragma unused (target)
 #if __has_feature(objc_arc)
-    Reachability *reachability = ((__bridge Reachability*)info);
+    SKReachability *reachability = ((__bridge SKReachability*)info);
 #else
-    Reachability *reachability = ((Reachability*)info);
+    SKReachability *reachability = ((SKReachability*)info);
 #endif
     
     // We probably don't need an autoreleasepool here, as GCD docs state each queue has its own autorelease pool,
@@ -86,7 +86,7 @@ static void TMReachabilityCallback(SCNetworkReachabilityRef target, SCNetworkRea
 }
 
 
-@implementation Reachability
+@implementation SKReachability
 
 @synthesize reachabilityRef;
 @synthesize reachabilitySerialQueue;
@@ -100,12 +100,12 @@ static void TMReachabilityCallback(SCNetworkReachabilityRef target, SCNetworkRea
 
 #pragma mark - Class Constructor Methods
 
-+(Reachability*)reachabilityWithHostName:(NSString*)hostname
++(SKReachability*)reachabilityWithHostName:(NSString*)hostname
 {
-    return [Reachability reachabilityWithHostname:hostname];
+    return [SKReachability reachabilityWithHostname:hostname];
 }
 
-+(Reachability*)reachabilityWithHostname:(NSString*)hostname
++(SKReachability*)reachabilityWithHostname:(NSString*)hostname
 {
     SCNetworkReachabilityRef ref = SCNetworkReachabilityCreateWithName(NULL, [hostname UTF8String]);
     if (ref) 
@@ -123,7 +123,7 @@ static void TMReachabilityCallback(SCNetworkReachabilityRef target, SCNetworkRea
     return nil;
 }
 
-+(Reachability *)reachabilityWithAddress:(const struct sockaddr_in *)hostAddress 
++(SKReachability *)reachabilityWithAddress:(const struct sockaddr_in *)hostAddress 
 {
     SCNetworkReachabilityRef ref = SCNetworkReachabilityCreateWithAddress(kCFAllocatorDefault, (const struct sockaddr*)hostAddress);
     if (ref) 
@@ -140,7 +140,7 @@ static void TMReachabilityCallback(SCNetworkReachabilityRef target, SCNetworkRea
     return nil;
 }
 
-+(Reachability *)reachabilityForInternetConnection 
++(SKReachability *)reachabilityForInternetConnection 
 {   
     struct sockaddr_in zeroAddress;
     bzero(&zeroAddress, sizeof(zeroAddress));
@@ -150,7 +150,7 @@ static void TMReachabilityCallback(SCNetworkReachabilityRef target, SCNetworkRea
     return [self reachabilityWithAddress:&zeroAddress];
 }
 
-+(Reachability*)reachabilityForLocalWiFi
++(SKReachability*)reachabilityForLocalWiFi
 {
     struct sockaddr_in localWifiAddress;
     bzero(&localWifiAddress, sizeof(localWifiAddress));
@@ -165,7 +165,7 @@ static void TMReachabilityCallback(SCNetworkReachabilityRef target, SCNetworkRea
 
 // Initialization methods
 
--(Reachability *)initWithReachabilityRef:(SCNetworkReachabilityRef)ref 
+-(SKReachability *)initWithReachabilityRef:(SCNetworkReachabilityRef)ref 
 {
     self = [super init];
     if (self != nil) 
@@ -510,7 +510,7 @@ static void TMReachabilityCallback(SCNetworkReachabilityRef target, SCNetworkRea
     
     // this makes sure the change notification happens on the MAIN THREAD
     dispatch_async(dispatch_get_main_queue(), ^{
-        [[NSNotificationCenter defaultCenter] postNotificationName:kReachabilityChangedNotification 
+        [[NSNotificationCenter defaultCenter] postNotificationName:kSKReachabilityChangedNotification 
                                                             object:self];
     });
 }

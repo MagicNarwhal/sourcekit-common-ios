@@ -5,55 +5,33 @@ SourceKit Common are a set of utilities used across several SourceKit projects.
 
 **Features:**
 
-- Logging
-- Reachability
+Logger
+======
 
-Getting Started
-===============
+A simple logger with tag and level.
 
-Please follow the steps below to get started.
+To set log level, use the following:
 
-Step 1: Include "SourceKitCommon" xcode project
+[SKLogger setLogLevel:SourceKitLogLevelError]; // Set logging level
 
-Step 2: Import header file(s) into your project:
+Log Levels:
 
-	#import "SourceKitLogger.h"
-	#import "Reachability.h"
-	
-Step 3: Add the following to "Link Binary with Libraries"
+* SourceKitLogLevelNone
+* SourceKitLogLevelError
+* SourceKitLogLevelWarning
+* SourceKitLogLevelInfo
+* SourceKitLogLevelDebug
 
-	SystemConfiguration.framework
 
-To use logging:
+SKReachability
+=====================
 
-	[SourceKitLogger setLogLevel:SourceKitLogLevelError]; // Set logging level
-	
-	// Use the following if you want to throw a specific one
-	[SourceKitLogger info:@"...."];
-	[SourceKitLogger warning:@"...."];
-	[SourceKitLogger error:@"...."];
-	[SourceKitLogger debug:@"...."];
-	
-To use Reachability:
+SKReachability is an ARC and GCD Compatible Reachability Class for iOS and MacOS. Drop in replacement for Apple Reachability. For more information, please visit: https://github.com/tonymillion/Reachability. Developed by Tony Million.
 
-	// Allocate a reachability object
-	Reachability* reach = [Reachability reachabilityWithHostname:@"www.google.com"];
+SKBrowser
+=========
 
-	// Set the blocks 
-	reach.reachableBlock = ^(Reachability*reach)
-	{
-    	NSLog(@"REACHABLE!");
-	};
-
-	reach.unreachableBlock = ^(Reachability*reach)
-	{
-    	NSLog(@"UNREACHABLE!");
-	};
-
-	// Start the notifier, which will cause the reachability object to retain itself!
-	[reach startNotifier];
-	
-To get more information on Tony Million Reachability, please visit https://github.com/tonymillion/Reachability.
+SKBrowser is a browser expanding UIWebView capabilities and offer a configurable toolbar. It also has a delegate if you would like to be notified on any lifecycle events. It also handles phone calls, SMS, deep links and other links.
 
 LICENSE
 =======

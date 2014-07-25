@@ -1,17 +1,17 @@
 //
-//  SourceKitLogger.m
+//  SKLogger.m
 //  SourceKit
 //
 //  Created by Tom Poland on 9/24/13.
 //  Copyright 2013 Nexage Inc. All rights reserved.
 //
 
-#import "SourceKitLogger.h"
+#import "SKLogger.h"
 
 // Default setting is SourceKitLogLevelNone.
 static SourceKitLogLevel logLevel;
 
-@implementation SourceKitLogger
+@implementation SKLogger
 
 + (void)setLogLevel:(SourceKitLogLevel)level
 {
@@ -28,31 +28,31 @@ static SourceKitLogLevel logLevel;
     logLevel = level;
 }
 
-+ (void)error:(NSString *)message
++ (void)error:(NSString *)tag withMessage:(NSString *)message
 {
     if (logLevel >= SourceKitLogLevelError) {
-        NSLog(@"SourceKit: (E) %@", message);
+        NSLog(@"%@: (E) %@", tag, message);
     }
 }
 
-+ (void)warning:(NSString *)message
++ (void)warning:(NSString *)tag withMessage:(NSString *)message
 {
     if (logLevel >= SourceKitLogLevelWarning) {
-        NSLog(@"SourceKit: (W) %@", message);
+        NSLog(@"%@: (W) %@", tag, message);
     }
 }
 
-+ (void)info:(NSString *)message
++ (void)info:(NSString *)tag withMessage:(NSString *)message
 {
     if (logLevel >= SourceKitLogLevelInfo) {
-        NSLog(@"SourceKit: (I) %@", message);
+        NSLog(@"%@: (I) %@", tag, message);
     }
 }
 
-+ (void)debug:(NSString *)message
++ (void)debug:(NSString *)tag withMessage:(NSString *)message
 {
     if (logLevel >= SourceKitLogLevelDebug) {
-        NSLog(@"SourceKit: (D) %@", message);
+        NSLog(@"%@: (D) %@", tag, message);
     }
 }
 

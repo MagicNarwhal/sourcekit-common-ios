@@ -8,9 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		2750AD671832BBF9005E1EE0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2750AD661832BBF9005E1EE0 /* Foundation.framework */; };
-		275E1DE51834203F00023552 /* SourceKitLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 275E1DE41834203F00023552 /* SourceKitLogger.m */; };
 		27813297183D278D00185C84 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27813296183D278D00185C84 /* SystemConfiguration.framework */; };
-		278132A3183D2C8400185C84 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 278132A2183D2C8400185C84 /* Reachability.m */; };
+		278132A3183D2C8400185C84 /* SKReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 278132A2183D2C8400185C84 /* SKReachability.m */; };
+		2797EF01194BAE9A00D0E745 /* SKLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 2797EF00194BAE9A00D0E745 /* SKLogger.m */; };
+		27BE4915198186D9004EE6D5 /* SKCommonSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 27BE4914198186D9004EE6D5 /* SKCommonSettings.m */; };
+		27F32E66195B6019001F57ED /* SKBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = 27F32E61195B6019001F57ED /* SKBrowser.m */; };
+		27F32E67195B6019001F57ED /* SKBrowserControlsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 27F32E63195B6019001F57ED /* SKBrowserControlsView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,12 +31,19 @@
 /* Begin PBXFileReference section */
 		2750AD631832BBF9005E1EE0 /* libSourceKitCommon.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSourceKitCommon.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		2750AD661832BBF9005E1EE0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		275E1DE31834203F00023552 /* SourceKitLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SourceKitLogger.h; sourceTree = "<group>"; };
-		275E1DE41834203F00023552 /* SourceKitLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SourceKitLogger.m; sourceTree = "<group>"; };
 		27813294183D278600185C84 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		27813296183D278D00185C84 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		278132A1183D2C8400185C84 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
-		278132A2183D2C8400185C84 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		278132A1183D2C8400185C84 /* SKReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKReachability.h; sourceTree = "<group>"; };
+		278132A2183D2C8400185C84 /* SKReachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKReachability.m; sourceTree = "<group>"; };
+		2797EEFF194BAE9A00D0E745 /* SKLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKLogger.h; sourceTree = "<group>"; };
+		2797EF00194BAE9A00D0E745 /* SKLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKLogger.m; sourceTree = "<group>"; };
+		27BE4913198186D9004EE6D5 /* SKCommonSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKCommonSettings.h; sourceTree = SOURCE_ROOT; };
+		27BE4914198186D9004EE6D5 /* SKCommonSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKCommonSettings.m; sourceTree = SOURCE_ROOT; };
+		27F32E60195B6019001F57ED /* SKBrowser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKBrowser.h; sourceTree = "<group>"; };
+		27F32E61195B6019001F57ED /* SKBrowser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKBrowser.m; sourceTree = "<group>"; };
+		27F32E62195B6019001F57ED /* SKBrowserControlsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKBrowserControlsView.h; sourceTree = "<group>"; };
+		27F32E63195B6019001F57ED /* SKBrowserControlsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKBrowserControlsView.m; sourceTree = "<group>"; };
+		27F32E6E195B62AF001F57ED /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +82,7 @@
 				27813296183D278D00185C84 /* SystemConfiguration.framework */,
 				27813294183D278600185C84 /* CFNetwork.framework */,
 				2750AD661832BBF9005E1EE0 /* Foundation.framework */,
+				27F32E6E195B62AF001F57ED /* CoreFoundation.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -79,29 +90,43 @@
 		275E1DE21834203F00023552 /* SourceKit */ = {
 			isa = PBXGroup;
 			children = (
+				27BE4913198186D9004EE6D5 /* SKCommonSettings.h */,
+				27BE4914198186D9004EE6D5 /* SKCommonSettings.m */,
+				27F32E5D195B6019001F57ED /* Browser */,
+				2797EEFE194BAE9A00D0E745 /* Logger */,
 				278132A0183D2C8400185C84 /* Reachability */,
-				275E1DE61834204600023552 /* Logging */,
 			);
 			path = SourceKit;
-			sourceTree = "<group>";
-		};
-		275E1DE61834204600023552 /* Logging */ = {
-			isa = PBXGroup;
-			children = (
-				275E1DE31834203F00023552 /* SourceKitLogger.h */,
-				275E1DE41834203F00023552 /* SourceKitLogger.m */,
-			);
-			name = Logging;
 			sourceTree = "<group>";
 		};
 		278132A0183D2C8400185C84 /* Reachability */ = {
 			isa = PBXGroup;
 			children = (
-				278132A1183D2C8400185C84 /* Reachability.h */,
-				278132A2183D2C8400185C84 /* Reachability.m */,
+				278132A1183D2C8400185C84 /* SKReachability.h */,
+				278132A2183D2C8400185C84 /* SKReachability.m */,
 			);
 			name = Reachability;
 			path = External/Reachability;
+			sourceTree = SOURCE_ROOT;
+		};
+		2797EEFE194BAE9A00D0E745 /* Logger */ = {
+			isa = PBXGroup;
+			children = (
+				2797EEFF194BAE9A00D0E745 /* SKLogger.h */,
+				2797EF00194BAE9A00D0E745 /* SKLogger.m */,
+			);
+			path = Logger;
+			sourceTree = SOURCE_ROOT;
+		};
+		27F32E5D195B6019001F57ED /* Browser */ = {
+			isa = PBXGroup;
+			children = (
+				27F32E60195B6019001F57ED /* SKBrowser.h */,
+				27F32E61195B6019001F57ED /* SKBrowser.m */,
+				27F32E62195B6019001F57ED /* SKBrowserControlsView.h */,
+				27F32E63195B6019001F57ED /* SKBrowserControlsView.m */,
+			);
+			path = Browser;
 			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
@@ -155,8 +180,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				278132A3183D2C8400185C84 /* Reachability.m in Sources */,
-				275E1DE51834203F00023552 /* SourceKitLogger.m in Sources */,
+				278132A3183D2C8400185C84 /* SKReachability.m in Sources */,
+				27F32E67195B6019001F57ED /* SKBrowserControlsView.m in Sources */,
+				27BE4915198186D9004EE6D5 /* SKCommonSettings.m in Sources */,
+				2797EF01194BAE9A00D0E745 /* SKLogger.m in Sources */,
+				27F32E66195B6019001F57ED /* SKBrowser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
