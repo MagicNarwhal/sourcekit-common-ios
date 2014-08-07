@@ -15,7 +15,7 @@ extern NSString * const kSourceKitBrowserFeatureScalePagesToFit;
 
 @class SKBrowser;
 
-@protocol SourceKitBrowserDelegate <NSObject>
+@protocol SKBrowserDelegate <NSObject>
 
 @required
 
@@ -31,9 +31,9 @@ extern NSString * const kSourceKitBrowserFeatureScalePagesToFit;
 
 @interface SKBrowser : UIViewController <SourceKitBrowserControlsViewDelegate>
 
-@property (nonatomic, unsafe_unretained) id<SourceKitBrowserDelegate>delegate;
+@property (nonatomic, unsafe_unretained) id<SKBrowserDelegate>delegate;
 
-- (id)initWithDelegate:(id<SourceKitBrowserDelegate>)delegate withFeatures:(NSArray *)sourceKitBrowserFeatures;  // designated initializer for SourceKitBrowser
+- (id)initWithDelegate:(id<SKBrowserDelegate>)delegate withFeatures:(NSArray *)sourceKitBrowserFeatures;  // designated initializer for SourceKitBrowser
 
 - (void)loadRequest:(NSURLRequest *)urlRequest;   // load urlRequest and present the souceKitBrowserViewController Note: requests such as tel: will immediately be presented using the UIApplication openURL: method without presenting the SourceKitBrowser's viewController
 

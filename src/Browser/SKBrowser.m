@@ -38,7 +38,7 @@ NSString * const kSourceKitBrowserTelPrefix = @"tel://";
 #pragma mark - Init & dealloc
 
 // designated initializer
-- (id)initWithDelegate:(id<SourceKitBrowserDelegate>)delegate withFeatures:(NSArray *)p_sourceKitBrowserFeatures
+- (id)initWithDelegate:(id<SKBrowserDelegate>)delegate withFeatures:(NSArray *)p_sourceKitBrowserFeatures
 {
     self = [super initWithNibName:nil bundle:nil];
     if (self) {
