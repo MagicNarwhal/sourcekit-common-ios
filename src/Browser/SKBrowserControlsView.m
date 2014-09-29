@@ -27,7 +27,7 @@ static const float kControlsLoadingIndicatorWidthHeight = 30.0;
     UIBarButtonItem *launchSafariButton;
     UIBarButtonItem *flexLaunch;
     UIBarButtonItem *stopButton;
-    SKBrowser *skBrowser;
+    __unsafe_unretained SKBrowser *skBrowser;
 }
 
 @end
@@ -85,6 +85,18 @@ static const float kControlsLoadingIndicatorWidthHeight = 30.0;
                                    reason:@"-initWithFrame: is not a valid initializer for the class SourceKitBrowserControlsView"
                                  userInfo:nil];
     return nil;
+}
+
+- (void)dealloc
+{
+    flexBack = nil;
+    flexForward = nil;
+    flexLoading = nil;
+    refreshButton = nil;
+    flexRefresh = nil;
+    flexLaunch = nil;
+    launchSafariButton = nil;
+    stopButton = nil;
 }
 
 #pragma mark -

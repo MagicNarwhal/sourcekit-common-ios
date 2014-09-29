@@ -8,4 +8,4 @@
 
 #import "SKCommonSettings.h"
 
-NSString* const kCommonKitVersion     = @"1.0.2";
+NSString* const kCommonKitVersion     = @"1.0.3";

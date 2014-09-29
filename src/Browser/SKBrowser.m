@@ -9,7 +9,8 @@
 #import "SKBrowser.h"
 #import "SKLogger.h"
 
-#define SYSTEM_VERSION_LESS_THAN(v)  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedAscending)
+#define SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(v)  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedAscending)
+#define SYSTEM_VERSION_LESS_THAN(v)                 ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedAscending)
 
 // Features
 NSString * const kSourceKitBrowserFeatureDisableStatusBar = @"disableStatusBar";
@@ -104,10 +105,15 @@ NSString * const kSourceKitBrowserTelPrefix = @"tel://";
         // actual interface orientation.
         UIInterfaceOrientation interfaceOrientation = [UIApplication sharedApplication].statusBarOrientation;
         BOOL isLandscape = UIInterfaceOrientationIsLandscape(interfaceOrientation);
-        if (isLandscape) {
-            browserControlsView.frame  = CGRectMake(0, self.view.frame.size.width-browserControlsView.frame.size.width, self.view.frame.size.height,browserControlsView.frame.size.width);
-        } else {
+  
+        if (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"8.0")) {
             browserControlsView.frame  = CGRectMake(0, self.view.frame.size.height-browserControlsView.frame.size.height, self.view.frame.size.width,browserControlsView.frame.size.height);
+        } else {
+            if (isLandscape) {
+                browserControlsView.frame  = CGRectMake(0, self.view.frame.size.width-browserControlsView.frame.size.width, self.view.frame.size.height,browserControlsView.frame.size.width);
+            } else {
+                browserControlsView.frame  = CGRectMake(0, self.view.frame.size.height-browserControlsView.frame.size.height, self.view.frame.size.width,browserControlsView.frame.size.height);
+            }
         }
         
         loadingIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
@@ -290,18 +296,8 @@ NSString * const kSourceKitBrowserTelPrefix = @"tel://";
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView
 {
-    if ([webView canGoBack]) {
-        browserControlsView.backButton.enabled = YES;
-    } else {
-        browserControlsView.backButton.enabled = NO;
-    }
-    
-    if ([webView canGoForward]) {
-        browserControlsView.forwardButton.enabled = YES;
-    } else {
-        browserControlsView.forwardButton.enabled = NO;
-    }
-    
+    browserControlsView.backButton.enabled = [webView canGoBack];
+    browserControlsView.forwardButton.enabled = [webView canGoForward];
     [loadingIndicator stopAnimating];
 }
 
@@ -329,6 +325,11 @@ NSString * const kSourceKitBrowserTelPrefix = @"tel://";
     
     self.delegate = nil;
     browserWebView = nil;
+    browserControlsView = nil;
+    currrentRequest = nil;
+    loadingIndicator = nil;
+    sourceKitBrowserFeatures = nil;
+    
     [currentViewController dismissViewControllerAnimated:NO completion:nil];
 }
 
