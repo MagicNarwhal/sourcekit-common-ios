@@ -27,6 +27,8 @@
 
 #import "SKReachability.h"
 
+#import <netinet/in.h>
+#import <netinet6/in6.h>
 
 NSString *const kSKReachabilityChangedNotification = @"kReachabilityChangedNotification";
 
