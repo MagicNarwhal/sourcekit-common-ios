@@ -14,6 +14,17 @@
 		27BE4915198186D9004EE6D5 /* SKCommonSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 27BE4914198186D9004EE6D5 /* SKCommonSettings.m */; };
 		27F32E66195B6019001F57ED /* SKBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = 27F32E61195B6019001F57ED /* SKBrowser.m */; };
 		27F32E67195B6019001F57ED /* SKBrowserControlsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 27F32E63195B6019001F57ED /* SKBrowserControlsView.m */; };
+		3B27F1021DDA46ED0000DE8C /* SourceKitCommon.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B27F1001DDA46ED0000DE8C /* SourceKitCommon.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3B27F1061DDA47260000DE8C /* SKCommonSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 27BE4914198186D9004EE6D5 /* SKCommonSettings.m */; };
+		3B27F1071DDA47260000DE8C /* SKBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = 27F32E61195B6019001F57ED /* SKBrowser.m */; };
+		3B27F1081DDA47260000DE8C /* SKBrowserControlsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 27F32E63195B6019001F57ED /* SKBrowserControlsView.m */; };
+		3B27F1091DDA47260000DE8C /* SKLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 2797EF00194BAE9A00D0E745 /* SKLogger.m */; };
+		3B27F10A1DDA47260000DE8C /* SKReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 278132A2183D2C8400185C84 /* SKReachability.m */; };
+		3B27F10B1DDA479F0000DE8C /* SKCommonSettings.h in Headers */ = {isa = PBXBuildFile; fileRef = 27BE4913198186D9004EE6D5 /* SKCommonSettings.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3B27F10C1DDA479F0000DE8C /* SKBrowser.h in Headers */ = {isa = PBXBuildFile; fileRef = 27F32E60195B6019001F57ED /* SKBrowser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3B27F10D1DDA479F0000DE8C /* SKBrowserControlsView.h in Headers */ = {isa = PBXBuildFile; fileRef = 27F32E62195B6019001F57ED /* SKBrowserControlsView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3B27F10E1DDA479F0000DE8C /* SKLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 2797EEFF194BAE9A00D0E745 /* SKLogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3B27F10F1DDA479F0000DE8C /* SKReachability.h in Headers */ = {isa = PBXBuildFile; fileRef = 278132A1183D2C8400185C84 /* SKReachability.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,7 +40,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		2750AD631832BBF9005E1EE0 /* libSourceKitCommon.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSourceKitCommon.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		2750AD631832BBF9005E1EE0 /* libSourceKitCommon_static.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSourceKitCommon_static.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		2750AD661832BBF9005E1EE0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		27813294183D278600185C84 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		27813296183D278D00185C84 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -44,6 +55,9 @@
 		27F32E62195B6019001F57ED /* SKBrowserControlsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKBrowserControlsView.h; sourceTree = "<group>"; };
 		27F32E63195B6019001F57ED /* SKBrowserControlsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKBrowserControlsView.m; sourceTree = "<group>"; };
 		27F32E6E195B62AF001F57ED /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		3B27F0FE1DDA46ED0000DE8C /* SourceKitCommon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SourceKitCommon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B27F1001DDA46ED0000DE8C /* SourceKitCommon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SourceKitCommon.h; sourceTree = "<group>"; };
+		3B27F1011DDA46ED0000DE8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +70,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3B27F0FA1DDA46ED0000DE8C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -63,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				275E1DE21834203F00023552 /* SourceKit */,
+				3B27F0FF1DDA46ED0000DE8C /* SourceKitCommon */,
 				2750AD651832BBF9005E1EE0 /* Frameworks */,
 				2750AD641832BBF9005E1EE0 /* Products */,
 			);
@@ -71,7 +93,8 @@
 		2750AD641832BBF9005E1EE0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2750AD631832BBF9005E1EE0 /* libSourceKitCommon.a */,
+				2750AD631832BBF9005E1EE0 /* libSourceKitCommon_static.a */,
+				3B27F0FE1DDA46ED0000DE8C /* SourceKitCommon.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -129,12 +152,37 @@
 			path = Browser;
 			sourceTree = SOURCE_ROOT;
 		};
+		3B27F0FF1DDA46ED0000DE8C /* SourceKitCommon */ = {
+			isa = PBXGroup;
+			children = (
+				3B27F1001DDA46ED0000DE8C /* SourceKitCommon.h */,
+				3B27F1011DDA46ED0000DE8C /* Info.plist */,
+			);
+			path = SourceKitCommon;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		3B27F0FB1DDA46ED0000DE8C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B27F1021DDA46ED0000DE8C /* SourceKitCommon.h in Headers */,
+				3B27F10B1DDA479F0000DE8C /* SKCommonSettings.h in Headers */,
+				3B27F10C1DDA479F0000DE8C /* SKBrowser.h in Headers */,
+				3B27F10D1DDA479F0000DE8C /* SKBrowserControlsView.h in Headers */,
+				3B27F10E1DDA479F0000DE8C /* SKLogger.h in Headers */,
+				3B27F10F1DDA479F0000DE8C /* SKReachability.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
-		2750AD621832BBF9005E1EE0 /* SourceKitCommon */ = {
+		2750AD621832BBF9005E1EE0 /* SourceKitCommon_static */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2750AD861832BBF9005E1EE0 /* Build configuration list for PBXNativeTarget "SourceKitCommon" */;
+			buildConfigurationList = 2750AD861832BBF9005E1EE0 /* Build configuration list for PBXNativeTarget "SourceKitCommon_static" */;
 			buildPhases = (
 				2750AD5F1832BBF9005E1EE0 /* Sources */,
 				2750AD601832BBF9005E1EE0 /* Frameworks */,
@@ -144,10 +192,28 @@
 			);
 			dependencies = (
 			);
-			name = SourceKitCommon;
+			name = SourceKitCommon_static;
 			productName = MMKUtilities;
-			productReference = 2750AD631832BBF9005E1EE0 /* libSourceKitCommon.a */;
+			productReference = 2750AD631832BBF9005E1EE0 /* libSourceKitCommon_static.a */;
 			productType = "com.apple.product-type.library.static";
+		};
+		3B27F0FD1DDA46ED0000DE8C /* SourceKitCommon */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3B27F1031DDA46ED0000DE8C /* Build configuration list for PBXNativeTarget "SourceKitCommon" */;
+			buildPhases = (
+				3B27F0F91DDA46ED0000DE8C /* Sources */,
+				3B27F0FA1DDA46ED0000DE8C /* Frameworks */,
+				3B27F0FB1DDA46ED0000DE8C /* Headers */,
+				3B27F0FC1DDA46ED0000DE8C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SourceKitCommon;
+			productName = SourceKitCommon;
+			productReference = 3B27F0FE1DDA46ED0000DE8C /* SourceKitCommon.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -157,6 +223,12 @@
 			attributes = {
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Nexage, Inc.";
+				TargetAttributes = {
+					3B27F0FD1DDA46ED0000DE8C = {
+						CreatedOnToolsVersion = 8.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
 			};
 			buildConfigurationList = 2750AD5E1832BBF8005E1EE0 /* Build configuration list for PBXProject "SourceKitCommon" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -170,10 +242,21 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2750AD621832BBF9005E1EE0 /* SourceKitCommon */,
+				2750AD621832BBF9005E1EE0 /* SourceKitCommon_static */,
+				3B27F0FD1DDA46ED0000DE8C /* SourceKitCommon */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3B27F0FC1DDA46ED0000DE8C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2750AD5F1832BBF9005E1EE0 /* Sources */ = {
@@ -185,6 +268,18 @@
 				27BE4915198186D9004EE6D5 /* SKCommonSettings.m in Sources */,
 				2797EF01194BAE9A00D0E745 /* SKLogger.m in Sources */,
 				27F32E66195B6019001F57ED /* SKBrowser.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B27F0F91DDA46ED0000DE8C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B27F1061DDA47260000DE8C /* SKCommonSettings.m in Sources */,
+				3B27F1071DDA47260000DE8C /* SKBrowser.m in Sources */,
+				3B27F1081DDA47260000DE8C /* SKBrowserControlsView.m in Sources */,
+				3B27F1091DDA47260000DE8C /* SKLogger.m in Sources */,
+				3B27F10A1DDA47260000DE8C /* SKReachability.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,7 +371,7 @@
 				DSTROOT = /tmp/SourceKitCommon.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = SourceKitCommon;
+				PRODUCT_NAME = SourceKitCommon_static;
 				PUBLIC_HEADERS_FOLDER_PATH = Headers;
 				SKIP_INSTALL = YES;
 			};
@@ -288,9 +383,66 @@
 				DSTROOT = /tmp/SourceKitCommon.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = SourceKitCommon;
+				PRODUCT_NAME = SourceKitCommon_static;
 				PUBLIC_HEADERS_FOLDER_PATH = Headers;
 				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		3B27F1041DDA46ED0000DE8C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = SourceKitCommon/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hiddenjester.SourceKitCommon;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		3B27F1051DDA46ED0000DE8C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = SourceKitCommon/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hiddenjester.SourceKitCommon;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -306,7 +458,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2750AD861832BBF9005E1EE0 /* Build configuration list for PBXNativeTarget "SourceKitCommon" */ = {
+		2750AD861832BBF9005E1EE0 /* Build configuration list for PBXNativeTarget "SourceKitCommon_static" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2750AD871832BBF9005E1EE0 /* Debug */,
@@ -314,6 +466,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		3B27F1031DDA46ED0000DE8C /* Build configuration list for PBXNativeTarget "SourceKitCommon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B27F1041DDA46ED0000DE8C /* Debug */,
+				3B27F1051DDA46ED0000DE8C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

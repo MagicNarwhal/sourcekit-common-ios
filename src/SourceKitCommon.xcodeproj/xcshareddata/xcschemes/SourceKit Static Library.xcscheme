@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3B27F0FD1DDA46ED0000DE8C"
-               BuildableName = "SourceKitCommon.framework"
-               BlueprintName = "SourceKitCommon"
+               BlueprintIdentifier = "2750AD621832BBF9005E1EE0"
+               BuildableName = "libSourceKitCommon_static.a"
+               BlueprintName = "SourceKitCommon_static"
                ReferencedContainer = "container:SourceKitCommon.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3B27F0FD1DDA46ED0000DE8C"
-            BuildableName = "SourceKitCommon.framework"
-            BlueprintName = "SourceKitCommon"
+            BlueprintIdentifier = "2750AD621832BBF9005E1EE0"
+            BuildableName = "libSourceKitCommon_static.a"
+            BlueprintName = "SourceKitCommon_static"
             ReferencedContainer = "container:SourceKitCommon.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -60,15 +60,6 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3B27F0FD1DDA46ED0000DE8C"
-            BuildableName = "SourceKitCommon.framework"
-            BlueprintName = "SourceKitCommon"
-            ReferencedContainer = "container:SourceKitCommon.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
