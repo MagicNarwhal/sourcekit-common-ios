@@ -14,11 +14,11 @@ FOUNDATION_EXPORT double SourceKitCommonVersionNumber;
 FOUNDATION_EXPORT const unsigned char SourceKitCommonVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <SourceKitCommon/PublicHeader.h>
-#import "SourceKitCommon/SKCommonSettings.h"
-#import "SourceKitCommon/SKBrowser.h"
-#import "SourceKitCommon/SKBrowserControlsView.h"
-#import "SourceKitCommon/SKLogger.h"
-#import "SourceKitCommon/SKReachability.h"
+#import "SKCommonSettings.h"
+#import "SKBrowser.h"
+#import "SKBrowserControlsView.h"
+#import "SKLogger.h"
+#import "SKReachability.h"
 
 
 
