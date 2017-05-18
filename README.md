@@ -2,7 +2,7 @@ SourceKit Common
 ================
 
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
-[![CocoaPods](https://img.shields.io/cocoapods/v/sourcekit-common-ios.svg)](https://github.com/MagicNarwhal/sourcekit-common-ios)
+[![CocoaPods](https://img.shields.io/cocoapods/v/SourceKitCommon.svg)](https://github.com/MagicNarwhal/sourcekit-common-ios)
 
 SourceKit Common are a set of utilities used across several SourceKit projects.
 

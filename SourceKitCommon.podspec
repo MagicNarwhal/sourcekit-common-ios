@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
   #  summary should be tweet-length, and the description more in depth.
   #
 
-  s.name         = "sourcekit-common-ios"
+  s.name         = "SourceKitCommon"
   s.version      = "1.0.5"
   s.summary      = "SourceKit Common Classes"
 
@@ -64,8 +64,8 @@ Pod::Spec.new do |s|
   #
 
    s.platform     = :ios
-  # s.platform     = :ios, "5.0"
 
+  # s.platform     = :ios, "5.0"
   #  When using multiple platforms
   # s.ios.deployment_target = "5.0"
   # s.osx.deployment_target = "10.7"
@@ -94,7 +94,6 @@ Pod::Spec.new do |s|
   # s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
-
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
