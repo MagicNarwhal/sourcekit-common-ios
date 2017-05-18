@@ -2,6 +2,7 @@ SourceKit Common
 ================
 
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+[![CocoaPods Compatible](http://img.shields.io/cocoapods/v/Mixpanel-swift.svg)](https://mixpanel.com)
 
 SourceKit Common are a set of utilities used across several SourceKit projects.
 
